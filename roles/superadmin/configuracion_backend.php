@@ -55,7 +55,7 @@ try {
         case 'backup_database':
             // Funcionalidad básica de backup
             $fecha = date('Y-m-d_H-i-s');
-            $archivo_backup = "backup_flotavehicular_{$fecha}.sql";
+            $archivo_backup = "backup_proyecto_flota_{$fecha}.sql";
             
             // Aquí implementarías la lógica real de backup
             echo json_encode(['success' => true, 'message' => 'Backup creado: ' . $archivo_backup]);

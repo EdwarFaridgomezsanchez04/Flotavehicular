@@ -87,8 +87,8 @@ $con = $db->conectar();
             <select class="form-select" id="rolAgregar" name="rol" required>
               <option value="">Seleccione</option>
               <?php
-              // Consulta para obtener todos los roles disponibles desde la base de datos
-              $rolQuery = $con->prepare("SELECT id_rol, tip_rol FROM roles");
+              // Consulta para obtener solo el rol de usuarios (id 2)
+              $rolQuery = $con->prepare("SELECT id_rol, tip_rol FROM roles WHERE id_rol = 2");
               $rolQuery->execute();
               $roles = $rolQuery->fetchAll(PDO::FETCH_ASSOC);
               
@@ -585,8 +585,8 @@ $con = $db->conectar();
             <select class="form-select" id="rolEditar" name="rol" required>
               <option value="">Seleccione</option>
               <?php
-              // Reutilizar consulta de roles para el modal de edición
-              $rolQuery = $con->prepare("SELECT id_rol, tip_rol FROM roles");
+              // Reutilizar consulta de roles para el modal de edición (solo rol usuarios id 2)
+              $rolQuery = $con->prepare("SELECT id_rol, tip_rol FROM roles WHERE id_rol = 2");
               $rolQuery->execute();
               $roles = $rolQuery->fetchAll(PDO::FETCH_ASSOC);
               foreach ($roles as $rol) {
