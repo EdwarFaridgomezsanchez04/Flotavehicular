@@ -1,0 +1,100 @@
+[08-Jul-2025 01:39:38 Europe/Berlin] No placa provided in get_vehicle.php
+[08-Jul-2025 01:39:42 Europe/Berlin] No placa provided in get_vehicle.php
+[08-Jul-2025 01:39:50 Europe/Berlin] No placa provided in delete_vehicle.php
+[08-Jul-2025 01:40:09 Europe/Berlin] No placa provided in get_vehicle.php
+[08-Jul-2025 01:40:22 Europe/Berlin] No placa provided in get_vehicle.php
+[08-Jul-2025 01:40:24 Europe/Berlin] No placa provided in get_vehicle.php
+[08-Jul-2025 01:40:33 Europe/Berlin] No placa provided in get_vehicle.php
+[08-Jul-2025 01:41:24 Europe/Berlin] No placa provided in delete_vehicle.php
+[08-Jul-2025 01:41:40 Europe/Berlin] No placa provided in delete_vehicle.php
+[08-Jul-2025 01:46:53 Europe/Berlin] Missing required fields in update_vehicle.php for placa: 
+[08-Jul-2025 01:47:00 Europe/Berlin] No placa provided in delete_vehicle.php
+[08-Jul-2025 01:47:15 Europe/Berlin] No placa provided in delete_vehicle.php
+[08-Jul-2025 01:48:02 Europe/Berlin] Missing required fields in update_vehicle.php for placa: 
+[08-Jul-2025 01:48:09 Europe/Berlin] Missing required fields in update_vehicle.php for placa: 
+[08-Jul-2025 01:50:04 Europe/Berlin] Missing required fields in update_vehicle.php for placa: 
+[08-Jul-2025 01:50:09 Europe/Berlin] Missing required fields in update_vehicle.php for placa: 
+[08-Jul-2025 01:50:12 Europe/Berlin] Missing required fields in update_vehicle.php for placa: 
+[10-Jul-2025 03:30:47 Europe/Berlin] Database error in delete_vehicle.php: Query failed - SQLSTATE[42S02]: Base table or view not found: 1146 Table 'proyecto_flota.multas' doesn't exist
+[10-Jul-2025 03:33:17 Europe/Berlin] Executing query: SELECT COUNT(*) FROM mantenimiento WHERE placa = :placa for placa: null
+[10-Jul-2025 03:33:17 Europe/Berlin] Result for mantenimiento: 0 records
+[10-Jul-2025 03:33:17 Europe/Berlin] Executing query: SELECT COUNT(*) FROM llantas WHERE placa = :placa for placa: null
+[10-Jul-2025 03:33:17 Europe/Berlin] Result for llantas: 0 records
+[10-Jul-2025 03:33:17 Europe/Berlin] Executing query: SELECT COUNT(*) FROM soat WHERE id_placa = :placa for placa: null
+[10-Jul-2025 03:33:17 Europe/Berlin] Result for soat: 0 records
+[10-Jul-2025 03:33:17 Europe/Berlin] Executing query: SELECT COUNT(*) FROM tecnomecanica WHERE id_placa = :placa for placa: null
+[10-Jul-2025 03:33:17 Europe/Berlin] Result for tecnomecanica: 0 records
+[10-Jul-2025 03:33:23 Europe/Berlin] Executing query: SELECT COUNT(*) FROM mantenimiento WHERE placa = :placa for placa: null
+[10-Jul-2025 03:33:23 Europe/Berlin] Result for mantenimiento: 0 records
+[10-Jul-2025 03:33:23 Europe/Berlin] Executing query: SELECT COUNT(*) FROM llantas WHERE placa = :placa for placa: null
+[10-Jul-2025 03:33:23 Europe/Berlin] Result for llantas: 0 records
+[10-Jul-2025 03:33:23 Europe/Berlin] Executing query: SELECT COUNT(*) FROM soat WHERE id_placa = :placa for placa: null
+[10-Jul-2025 03:33:23 Europe/Berlin] Result for soat: 0 records
+[10-Jul-2025 03:33:23 Europe/Berlin] Executing query: SELECT COUNT(*) FROM tecnomecanica WHERE id_placa = :placa for placa: null
+[10-Jul-2025 03:33:23 Europe/Berlin] Result for tecnomecanica: 0 records
+[10-Jul-2025 03:42:36 Europe/Berlin] Executing query: SELECT COUNT(*) FROM mantenimiento WHERE placa = :placa for placa: null
+[10-Jul-2025 03:42:36 Europe/Berlin] Result for mantenimiento: 0 records
+[10-Jul-2025 03:42:36 Europe/Berlin] Executing query: SELECT COUNT(*) FROM llantas WHERE placa = :placa for placa: null
+[10-Jul-2025 03:42:36 Europe/Berlin] Result for llantas: 0 records
+[10-Jul-2025 03:42:36 Europe/Berlin] Executing query: SELECT COUNT(*) FROM soat WHERE id_placa = :placa for placa: null
+[10-Jul-2025 03:42:36 Europe/Berlin] Result for soat: 0 records
+[10-Jul-2025 03:42:36 Europe/Berlin] Executing query: SELECT COUNT(*) FROM tecnomecanica WHERE id_placa = :placa for placa: null
+[10-Jul-2025 03:42:36 Europe/Berlin] Result for tecnomecanica: 0 records
+[10-Jul-2025 03:44:00 Europe/Berlin] Executing query: SELECT COUNT(*) FROM mantenimiento WHERE placa = :placa for placa: null
+[10-Jul-2025 03:44:00 Europe/Berlin] Result for mantenimiento: 0 records
+[10-Jul-2025 03:44:00 Europe/Berlin] Executing query: SELECT COUNT(*) FROM llantas WHERE placa = :placa for placa: null
+[10-Jul-2025 03:44:00 Europe/Berlin] Result for llantas: 0 records
+[10-Jul-2025 03:44:00 Europe/Berlin] Executing query: SELECT COUNT(*) FROM soat WHERE id_placa = :placa for placa: null
+[10-Jul-2025 03:44:00 Europe/Berlin] Result for soat: 0 records
+[10-Jul-2025 03:44:00 Europe/Berlin] Executing query: SELECT COUNT(*) FROM tecnomecanica WHERE id_placa = :placa for placa: null
+[10-Jul-2025 03:44:00 Europe/Berlin] Result for tecnomecanica: 0 records
+[10-Jul-2025 03:45:04 Europe/Berlin] Executing query: SELECT COUNT(*) FROM mantenimiento WHERE placa = :placa for placa: null
+[10-Jul-2025 03:45:04 Europe/Berlin] Result for mantenimiento: 0 records
+[10-Jul-2025 03:45:04 Europe/Berlin] Executing query: SELECT COUNT(*) FROM llantas WHERE placa = :placa for placa: null
+[10-Jul-2025 03:45:04 Europe/Berlin] Result for llantas: 0 records
+[10-Jul-2025 03:45:04 Europe/Berlin] Executing query: SELECT COUNT(*) FROM soat WHERE id_placa = :placa for placa: null
+[10-Jul-2025 03:45:04 Europe/Berlin] Result for soat: 0 records
+[10-Jul-2025 03:45:04 Europe/Berlin] Executing query: SELECT COUNT(*) FROM tecnomecanica WHERE id_placa = :placa for placa: null
+[10-Jul-2025 03:45:05 Europe/Berlin] Result for tecnomecanica: 0 records
+[10-Jul-2025 03:45:21 Europe/Berlin] Executing query: SELECT COUNT(*) FROM mantenimiento WHERE placa = :placa for placa: null
+[10-Jul-2025 03:45:21 Europe/Berlin] Result for mantenimiento: 0 records
+[10-Jul-2025 03:45:21 Europe/Berlin] Executing query: SELECT COUNT(*) FROM llantas WHERE placa = :placa for placa: null
+[10-Jul-2025 03:45:21 Europe/Berlin] Result for llantas: 0 records
+[10-Jul-2025 03:45:21 Europe/Berlin] Executing query: SELECT COUNT(*) FROM soat WHERE id_placa = :placa for placa: null
+[10-Jul-2025 03:45:21 Europe/Berlin] Result for soat: 0 records
+[10-Jul-2025 03:45:21 Europe/Berlin] Executing query: SELECT COUNT(*) FROM tecnomecanica WHERE id_placa = :placa for placa: null
+[10-Jul-2025 03:45:21 Europe/Berlin] Result for tecnomecanica: 0 records
+[10-Jul-2025 03:47:01 Europe/Berlin] Executing query: SELECT COUNT(*) FROM mantenimiento WHERE placa = :placa for placa: null
+[10-Jul-2025 03:47:01 Europe/Berlin] Result for mantenimiento: 0 records
+[10-Jul-2025 03:47:01 Europe/Berlin] Executing query: SELECT COUNT(*) FROM llantas WHERE placa = :placa for placa: null
+[10-Jul-2025 03:47:01 Europe/Berlin] Result for llantas: 0 records
+[10-Jul-2025 03:47:01 Europe/Berlin] Executing query: SELECT COUNT(*) FROM soat WHERE id_placa = :placa for placa: null
+[10-Jul-2025 03:47:01 Europe/Berlin] Result for soat: 0 records
+[10-Jul-2025 03:47:01 Europe/Berlin] Executing query: SELECT COUNT(*) FROM tecnomecanica WHERE id_placa = :placa for placa: null
+[10-Jul-2025 03:47:01 Europe/Berlin] Result for tecnomecanica: 0 records
+[10-Jul-2025 04:21:35 Europe/Berlin] Executing query: SELECT COUNT(*) FROM mantenimiento WHERE placa = :placa for placa: null
+[10-Jul-2025 04:21:35 Europe/Berlin] Result for mantenimiento: 0 records
+[10-Jul-2025 04:21:35 Europe/Berlin] Executing query: SELECT COUNT(*) FROM llantas WHERE placa = :placa for placa: null
+[10-Jul-2025 04:21:35 Europe/Berlin] Result for llantas: 0 records
+[10-Jul-2025 04:21:35 Europe/Berlin] Executing query: SELECT COUNT(*) FROM soat WHERE id_placa = :placa for placa: null
+[10-Jul-2025 04:21:35 Europe/Berlin] Result for soat: 0 records
+[10-Jul-2025 04:21:35 Europe/Berlin] Executing query: SELECT COUNT(*) FROM tecnomecanica WHERE id_placa = :placa for placa: null
+[10-Jul-2025 04:21:35 Europe/Berlin] Result for tecnomecanica: 0 records
+[10-Jul-2025 04:33:52 Europe/Berlin] Deleted from correos_enviados_pico_placa where placa = null
+[10-Jul-2025 04:33:52 Europe/Berlin] Deleted from mantenimiento where placa = null
+[10-Jul-2025 04:33:52 Europe/Berlin] Deleted from llantas where placa = null
+[10-Jul-2025 04:33:52 Europe/Berlin] Deleted from soat where id_placa = null
+[10-Jul-2025 04:33:52 Europe/Berlin] Deleted from tecnomecanica where id_placa = null
+[10-Jul-2025 04:33:52 Europe/Berlin] Successfully deleted vehicle with placa: null
+[10-Jul-2025 04:34:12 Europe/Berlin] Deleted from correos_enviados_pico_placa where placa = null
+[10-Jul-2025 04:34:12 Europe/Berlin] Deleted from mantenimiento where placa = null
+[10-Jul-2025 04:34:12 Europe/Berlin] Deleted from llantas where placa = null
+[10-Jul-2025 04:34:12 Europe/Berlin] Deleted from soat where id_placa = null
+[10-Jul-2025 04:34:12 Europe/Berlin] Deleted from tecnomecanica where id_placa = null
+[10-Jul-2025 04:34:12 Europe/Berlin] Successfully deleted vehicle with placa: null
+[10-Jul-2025 04:34:30 Europe/Berlin] Deleted from correos_enviados_pico_placa where placa = null
+[10-Jul-2025 04:34:30 Europe/Berlin] Deleted from mantenimiento where placa = null
+[10-Jul-2025 04:34:30 Europe/Berlin] Deleted from llantas where placa = null
+[10-Jul-2025 04:34:30 Europe/Berlin] Deleted from soat where id_placa = null
+[10-Jul-2025 04:34:30 Europe/Berlin] Deleted from tecnomecanica where id_placa = null
+[10-Jul-2025 04:34:30 Europe/Berlin] Successfully deleted vehicle with placa: null

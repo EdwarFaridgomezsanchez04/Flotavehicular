@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* ====== CONTENEDOR GENERAL DEL FORMULARIO ====== */
+.contenido {   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.form-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* ====== CONTENEDOR DE GRUPOS ====== */
+.input-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* ====== GRUPOS DE CAMPOS ====== */
+.input-group > div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* ====== ICONOS + CAMPOS ====== */
+.input-group i {
+    position: absolute;
+    top: 33px;
+    left: 10px;
+    color: #555;
+    font-size: 18px;
+    z-index: 1;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="file"],
+select {
+    padding: 10px 10px 10px 35px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out;
+    background-color: #fff;
+}
+
+input[type="date"] {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+input[type="file"] {
+    padding-left: 35px;
+}
+
+/* ====== VALIDACIONES ====== */
+.validacion {
+    color: #dc3545;
+    font-size: 13px;
+    margin-top: 5px;
+    opacity: 0;
+}
+
+.formulario_error,
+.formulario_exito {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.formulario_error {
+    background: #ffe5e5;
+    color: #dc3545;
+}
+
+.formulario_exito {
+    background: #e7ffe7;
+    color: #158000;
+}
+
+/* ====== BOTÓN ====== */
+.btn-field {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+/* ====== ESTILOS PARA ESTADOS DE VALIDACIÓN (correcto / incorrecto) ====== */
+.input_field_placa_correcto,
+.input_field_modelo_correcto,
+.input_field_km_correcto,
+.input_field_tipo_correcto,
+.input_field_marca_correcto,
+.input_field_estado_correcto,
+.input_field_fecha_correcto {
+    border-color: #00a827 !important;
+}
+
+.input_field_placa_incorrecto,
+.input_field_modelo_incorrecto,
+.input_field_km_incorrecto,
+.input_field_tipo_incorrecto,
+.input_field_marca_incorrecto,
+.input_field_estado_incorrecto,
+.input_field_fecha_incorrecto {
+    border-color: #dc3545 !important;
+}
+
+
+/* ====== RESPONSIVE (para pantallas pequeñas) ====== */
+@media (max-width: 768px) {
+    .input-group {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-field {
+        grid-column: span 1;
+    }
+}
+
+
+

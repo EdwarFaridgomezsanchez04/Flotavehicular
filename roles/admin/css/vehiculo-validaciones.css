@@ -1,0 +1,198 @@
+/* ===== ESTILOS PARA VALIDACIONES DE VEHÍCULOS ===== */
+
+/* Estilos para campos correctos */
+.input_field_placa_correcto,
+.input_field_anio_correcto,
+.input_field_modelo_correcto,
+.input_field_kilometraje_correcto,
+.input_field_placa_edit_correcto,
+.input_field_anio_edit_correcto,
+.input_field_modelo_edit_correcto,
+.input_field_kilometraje_edit_correcto {
+    border-color: #28a745 !important;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25) !important;
+}
+
+/* Estilos para campos incorrectos */
+.input_field_placa_incorrecto,
+.input_field_anio_incorrecto,
+.input_field_modelo_incorrecto,
+.input_field_kilometraje_incorrecto,
+.input_field_placa_edit_incorrecto,
+.input_field_anio_edit_incorrecto,
+.input_field_modelo_edit_incorrecto,
+.input_field_kilometraje_edit_incorrecto {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25) !important;
+}
+
+/* Estilos para selects inválidos */
+.form-select.is-invalid {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25) !important;
+}
+
+.form-select.is-valid {
+    border-color: #28a745 !important;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25) !important;
+}
+
+/* Animación para mensajes de validación */
+.text-danger {
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Estilos para mensajes de error general */
+#mensaje-error-vehiculo {
+    position: relative;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+/* Estilos para placeholders */
+.form-control::placeholder {
+    color: #6c757d;
+    opacity: 0.7;
+}
+
+/* Estilos para campos con foco */
+.form-control:focus,
+.form-select:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Estilos específicos para campos de placa */
+#placaAgregar,
+#editPlaca {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Estilos para vista previa de imagen */
+.img-fluid {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Estilos para grupos de validación */
+[id^="grupo_"] {
+    position: relative;
+}
+
+/* Estilos para iconos de validación */
+.input_field_placa_correcto::after,
+.input_field_anio_correcto::after,
+.input_field_modelo_correcto::after,
+.input_field_kilometraje_correcto::after {
+    content: "✓";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #28a745;
+    font-weight: bold;
+}
+
+.input_field_placa_incorrecto::after,
+.input_field_anio_incorrecto::after,
+.input_field_modelo_incorrecto::after,
+.input_field_kilometraje_incorrecto::after {
+    content: "✗";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Responsive para modales */
+@media (max-width: 768px) {
+    .modal-dialog {
+        margin: 10px;
+    }
+    
+    .col-md-6 {
+        margin-bottom: 15px;
+    }
+    
+    .text-danger {
+        font-size: 0.75em !important;
+    }
+}
+
+/* Estilos para botones de formulario */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #545b62;
+    border-color: #545b62;
+    transform: translateY(-1px);
+}
+
+/* Estilos para modales */
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.modal-header {
+    border-bottom: 2px solid #e9ecef;
+    background-color: #f8f9fa;
+}
+
+.modal-footer {
+    border-top: 2px solid #e9ecef;
+    background-color: #f8f9fa;
+}
+
+/* Estilos para cards en modal de detalles */
+.card {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    font-weight: 600;
+}
+
+/* Estilos para información de detalles */
+.fw-bold.text-muted {
+    color: #6c757d !important;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Estilos para valores de detalles */
+.card-body p {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #495057;
+} 

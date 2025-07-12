@@ -1,0 +1,206 @@
+.vehicle-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 25px 0;
+    padding: 25px;
+    background: linear-gradient(135deg, #f5f7fa, #e4e7eb);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vehicle-details:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.vehicle-image {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    position: relative;
+}
+
+.vehicle-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 2px solid #e0e0e0;
+    transition: transform 0.3s ease;
+}
+
+.vehicle-image img:hover {
+    transform: scale(1.03);
+}
+
+.vehicle-info {
+    flex: 2;
+    min-width: 200px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.vehicle-info p {
+    margin: 12px 0;
+    font-size: 16px;
+    color: #444;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 8px;
+}
+
+.vehicle-info p strong {
+    color: #222;
+    font-weight: 600;
+}
+
+.back-button {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.back-button .boton {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.back-button .boton:hover {
+    background: linear-gradient(90deg, #0056b3, #003d82);
+    transform: translateY(-2px);
+}
+
+/* Enhanced styles for the image upload form */
+.vehicle-image form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.vehicle-image form:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.vehicle-image label {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.vehicle-image label:hover {
+    background: linear-gradient(90deg, #3a9bde, #00c5d3);
+}
+
+.vehicle-image input[type="file"] {
+    display: none; /* Hide default file input */
+}
+
+.vehicle-image button {
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #28a745, #34c759);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    width: fit-content;
+    align-self: center;
+    box-shadow: 0 3px 10px rgba(40, 167, 69, 0.3);
+    transition: all 0.3s ease;
+}
+
+.vehicle-image button:hover {
+    background: linear-gradient(90deg, #218838, #1a6b2e);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+}
+
+/* Notification styles for success and error messages */
+.notification {
+    margin-bottom: 20px;
+    animation: slideIn 0.5s ease forwards;
+}
+
+.alert {
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.alert.success {
+    background: linear-gradient(90deg, #d4edda, #c3e6cb);
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert.error {
+    background: linear-gradient(90deg, #f8d7da, #f5c6cb);
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Animation for notifications */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .vehicle-details {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .vehicle-image,
+    .vehicle-info {
+        width: 100%;
+        max-width: none;
+    }
+
+    .vehicle-image img {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .vehicle-image form {
+        padding: 10px;
+    }
+
+    .back-button .boton {
+        padding: 10px 25px;
+    }
+}

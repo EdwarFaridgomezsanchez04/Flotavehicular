@@ -1,0 +1,25 @@
+Options -Indexes
+Options +FollowSymLinks
+RewriteEngine On
+
+
+# Ruta amigable para recuperación de contraseña: /login/change/TOKEN
+RewriteRule ^login/change/([A-Za-z0-9]+)$ login/change.php?token=urlencode($token) [L,QSA]
+
+# Quitar .php de la URL y redirigir a la versión sin extensión
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.+?)/?$ $1.php [L]
+
+# Si no existe el archivo, redirigir a index.php para manejo de rutas personalizadas
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+
+# Proteger archivos sensibles
+<FilesMatch "\.(htaccess|env|git|ini|log|sh|sql)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+

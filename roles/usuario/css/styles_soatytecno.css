@@ -1,0 +1,260 @@
+/* estilos.css */
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+
+.contenedor {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 600px;
+  margin: 50px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.titulo h1{
+  font-weight: bold;
+  text-align: center;
+}
+
+.input_field_poliza,
+.input_field_placa,
+.input_field_expedicion,
+.input_field_vencimiento,
+.input_field_aseguradora,
+.input_field_estado,
+.input_field_centro {
+  position: relative;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #198754;
+  outline: none;
+}
+
+.input_field_placa i,
+.input_field_aseguradora i,
+.input_field_expedicion i,
+.input_field_poliza i,
+.input_field_vencimiento i,
+.input_field_estado i, 
+.input_field_centro i{
+ 
+  position: absolute;
+  top: 2.6rem;
+  left: 0.8rem;
+  color: #6c757d;
+  font-size: 1.2rem;
+}
+
+.comprar {
+  padding: 20px;
+}
+
+.info {
+  text-align: center;
+}
+
+.cont_com{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link{
+  border-radius: 8px;
+  padding: 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  background: #0958d8;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+
+}
+
+.link:hover {
+  transform: scale(1.1);
+  background-color: #0248ba;
+}
+
+/* validaciones js */
+
+.validacion {
+  font-size: 0.9rem;
+  color: #dc3545;
+  opacity: 0;
+}
+
+.formulario_error_poliza p,
+.formulario_error_placa p,
+.formulario_error_expedicion p,
+.formulario_error_vencimiento p,
+.formulario_error_aseguradora p,
+.formulario_error_estado p,
+.formulario_error_centro p {
+  opacity: 0;
+}
+
+#formulario_error {
+  color: #dc3545;
+  font-weight: bold;
+  opacity: 0;
+  text-align: center;
+}
+
+#formulario_exito {
+  color: #198754;
+  font-weight: 600;
+  opacity: 0;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.btn-field {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.btn-success {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #157347;
+  transform: scale(1.1);
+}
+
+/* Mostrar mensajes de error si están activos mediante JS */
+.error .validacion,
+.formulario_error_poliza.mostrar p,
+.formulario_error_placa.mostrar p,
+.formulario_error_expedicion.mostrar p,
+.formulario_error_vencimiento.mostrar p,
+.formulario_error_aseguradora.mostrar p, 
+.formulario_error_estado.mostrar p,
+.formulario_error_centro.mostrar p{
+  opacity: 0;
+}
+
+/* .grupo_expedicion_correcto input,
+.grupo_vencimiento_correcto input,
+.grupo_placa_correcto select,
+.grupo_aseguradora_correcto select{
+  border-color: #157347;
+}
+
+.grupo_expedicion_incorrecto input,
+.grupo_vencimiento_incorrecto input,
+.grupo_placa_incorrecto select,
+.grupo_aseguradora_incorrecto select{
+  border-color: #b30000;
+} */
+
+/* Responsivo para tablets */
+@media (max-width: 900px) {
+  .contenedor {
+    max-width: 90vw;
+    padding: 1.5rem;
+    margin: 30px auto;
+  }
+  .btn-success {
+    width: 100%;
+    padding: 0.75rem 0;
+  }
+}
+
+/* Responsivo para móviles */
+@media (max-width: 600px) {
+  .contenedor {
+    max-width: 98vw;
+    padding: 1rem;
+    margin: 18px auto;
+    border-radius: 0.7rem;
+    box-shadow: 0 0 6px rgba(0,0,0,0.08);
+  }
+  .titulo h1 {
+    font-size: 1.3rem;
+  }
+  label {
+    font-size: 0.98rem;
+  }
+  input,
+  select {
+    font-size: 0.98rem;
+    padding: 0.7rem 0.8rem 0.7rem 2.2rem;
+    border-radius: 0.4rem;
+  }
+  .input_field_placa i,
+  .input_field_aseguradora i,
+  .input_field_expedicion i,
+  .input_field_poliza i,
+  .input_field_vencimiento i,
+  .input_field_estado i, 
+  .input_field_centro i {
+    top: 2.2rem;
+    left: 0.6rem;
+    font-size: 1rem;
+  }
+  .btn-success {
+    font-size: 0.98rem;
+    padding: 0.7rem 0;
+    border-radius: 0.4rem;
+  }
+  .link {
+    font-size: 0.98rem;
+    padding: 8px 12px;
+  }
+}
+
+/* Extra pequeño (muy móviles) */
+@media (max-width: 400px) {
+  .contenedor {
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+  }
+  .titulo h1 {
+    font-size: 1.05rem;
+  }
+  label {
+    font-size: 0.9rem;
+  }
+  input,
+  select {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.6rem 0.6rem 1.8rem;
+  }
+  .btn-success {
+    font-size: 0.9rem;
+    padding: 0.6rem 0;
+  }
+  .link {
+    font-size: 0.9rem;
+    padding: 6px 8px;
+  }
+}

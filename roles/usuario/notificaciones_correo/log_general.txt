@@ -1,0 +1,109 @@
+[2025-06-30 14:00:01] == INICIO de ejecución del cron para LICENCIA ==
+[2025-06-30 14:00:01] == INICIO de ejecución del cron para TECNO ==
+[2025-06-30 14:00:01] == INICIO de ejecución del cron para SOAT ==
+[2025-06-30 14:00:01] == FIN de ejecución del cron para TECNO ==
+[2025-06-30 14:00:01] == FIN de ejecución del cron para SOAT ==
+[2025-06-30 14:00:01] == FIN de ejecución del cron para LICENCIA ==
+[2025-06-30 14:00:01] == INICIO de ejecución del cron para PICO Y PLACA ==
+[2025-06-30 09:00:02] Correo enviado a: milady@gmail.com (Pico y Placa 2025-07-01)
+[2025-06-30 09:00:03] Correo enviado a: Carlosgo1821@gmail.com (Pico y Placa 2025-07-01)
+[2025-06-30 09:00:04] Correo enviado a: instructor@gmail.com (Pico y Placa 2025-07-01)
+[2025-06-30 09:00:05] Correo enviado a: Carlosgo1822@gmail.com (Pico y Placa 2025-07-01)
+[2025-06-30 09:00:05] == FIN de ejecución del cron para PICO Y PLACA ==
+[2025-07-01 14:00:01] == INICIO de ejecución del cron para TECNO ==
+[2025-07-01 14:00:01] == FIN de ejecución del cron para TECNO ==
+[2025-07-01 14:00:01] == INICIO de ejecución del cron para LICENCIA ==
+[2025-07-01 14:00:01] == FIN de ejecución del cron para LICENCIA ==
+[2025-07-01 14:00:01] == INICIO de ejecución del cron para SOAT ==
+[2025-07-01 14:00:01] == FIN de ejecución del cron para SOAT ==
+[2025-07-01 14:00:01] == INICIO de ejecución del cron para PICO Y PLACA ==
+[2025-07-01 09:00:01] No hay vehículos para enviar recordatorio mañana (Miércoles)
+[2025-07-01 14:41:43] == INICIO de ejecución del cron para LLANTAS ==
+[2025-07-01 14:41:43] == FIN de ejecución del cron para LLANTAS ==
+[2025-07-02 09:00:01] == INICIO de ejecución del cron para PICO Y PLACA ==
+[2025-07-02 09:00:01] == INICIO de ejecución del cron para MANTENIMIENTO ACEITE ==
+[2025-07-02 09:00:01] == INICIO de ejecución del cron para SOAT ==
+[2025-07-02 09:00:01] == INICIO de ejecución del cron para LLANTAS ==
+[2025-07-02 09:00:01] == INICIO de ejecución del cron para TECNO ==
+[2025-07-02 09:00:01] == FIN de ejecución del cron para TECNO ==
+[2025-07-02 09:00:01] == FIN de ejecución del cron para SOAT ==
+[2025-07-02 09:00:01] == INICIO de ejecución del cron para LICENCIA ==
+[2025-07-02 09:00:01] == FIN de ejecución del cron para LICENCIA ==
+[2025-07-02 09:00:02] Correo enviado a: edwardfaridg@gmail.com (Pico y Placa 2025-07-03)
+[2025-07-02 09:00:02] == FIN de ejecución del cron para PICO Y PLACA ==
+[2025-07-02 09:00:02] Correo enviado a instructor@gmail.com (3_dias)
+[2025-07-02 09:00:02] Correo enviado a adriancamargo69@gmail.com (hoy)
+[2025-07-02 09:00:03] Correo enviado a adriancamargo69@gmail.com (hoy)
+[2025-07-02 09:00:04] Correo enviado a federico@gmail.com (3_dias)
+[2025-07-02 09:00:04] == FIN de ejecución del cron para LLANTAS ==
+[2025-07-02 09:00:04] Correo enviado a federico@gmail.com (3_dias)
+[2025-07-02 09:00:04] == FIN de ejecución del cron para MANTENIMIENTO ACEITE ==
+[2025-07-03 01:19:15] == INICIO de ejecución del cron para PICO Y PLACA ==
+[2025-07-03 01:19:16] Correo enviado a: blayder2002@gmail.com (Pico y Placa 2025-07-04)
+[2025-07-03 01:19:17] Correo enviado a: adriancamargo69@gmail.com (Pico y Placa 2025-07-04)
+[2025-07-03 01:19:17] Correo enviado a: instructor@gmail.com (Pico y Placa 2025-07-04)
+[2025-07-03 01:19:18] Correo enviado a: Carlosgo1822@gmail.com (Pico y Placa 2025-07-04)
+[2025-07-03 01:19:18] == FIN de ejecución del cron para PICO Y PLACA ==
+[2025-07-03 06:56:44] == INICIO de ejecución del cron para SOAT ==
+[2025-07-03 06:56:44] == FIN de ejecución del cron para SOAT ==
+[2025-07-03 06:58:03] == INICIO de ejecución del cron para SOAT ==
+[2025-07-03 06:58:03] == FIN de ejecución del cron para SOAT ==
+[2025-07-03 06:58:04] == INICIO de ejecución del cron para SOAT ==
+[2025-07-03 06:58:04] == FIN de ejecución del cron para SOAT ==
+[2025-07-03 07:27:01] == INICIO de ejecución del cron para SOAT ==
+[2025-07-03 07:27:01] == FIN de ejecución del cron para SOAT ==
+[2025-07-03 07:27:05] == INICIO de ejecución del cron para SOAT ==
+[2025-07-03 07:27:05] == FIN de ejecución del cron para SOAT ==
+[2025-07-03 07:27:27] == INICIO de ejecución del cron para SOAT ==
+[2025-07-03 07:27:27] == FIN de ejecución del cron para SOAT ==
+[2025-07-03 07:27:38] == INICIO de ejecución del cron para SOAT ==
+[2025-07-03 07:27:38] == FIN de ejecución del cron para SOAT ==
+[2025-07-03 07:28:06] == INICIO de ejecución del cron para SOAT ==
+[2025-07-03 07:28:06] == FIN de ejecución del cron para SOAT ==
+[2025-07-03 07:28:23] == INICIO de ejecución del cron para SOAT ==
+[2025-07-03 07:28:24] Correo enviado a adriancamargo69@gmail.com (vencido)
+[2025-07-03 07:28:24] == FIN de ejecución del cron para SOAT ==
+[2025-07-03 07:29:01] == INICIO de ejecución del cron para SOAT ==
+[2025-07-03 07:29:02] Correo enviado a adriancamargo69@gmail.com (3_dia)
+[2025-07-03 07:29:02] == FIN de ejecución del cron para SOAT ==
+[2025-07-03 09:00:01] == INICIO de ejecución del cron para LLANTAS ==
+[2025-07-03 09:00:01] == INICIO de ejecución del cron para PICO Y PLACA ==
+[2025-07-03 09:00:01] == INICIO de ejecución del cron para TECNO ==
+[2025-07-03 09:00:01] == FIN de ejecución del cron para LLANTAS ==
+[2025-07-03 09:00:01] == FIN de ejecución del cron para TECNO ==
+[2025-07-03 09:00:01] Ya se envió recordatorio a blayder2002@gmail.com para la placa KYO069 el 2025-07-04
+[2025-07-03 09:00:01] Ya se envió recordatorio a adriancamargo69@gmail.com para la placa UVG099 el 2025-07-04
+[2025-07-03 09:00:01] Ya se envió recordatorio a instructor@gmail.com para la placa GAS900 el 2025-07-04
+[2025-07-03 09:00:01] Ya se envió recordatorio a Carlosgo1822@gmail.com para la placa HTM129 el 2025-07-04
+[2025-07-03 09:00:01] == FIN de ejecución del cron para PICO Y PLACA ==
+[2025-07-03 09:00:01] == INICIO de ejecución del cron para LICENCIA ==
+[2025-07-03 09:00:01] == FIN de ejecución del cron para LICENCIA ==
+[2025-07-03 09:00:03] == INICIO de ejecución del cron para SOAT ==
+[2025-07-03 09:00:03] == INICIO de ejecución del cron para MANTENIMIENTO ACEITE ==
+[2025-07-03 09:00:03] Ya se envió el recordatorio de tipo 3_dia a adriancamargo69@gmail.com
+[2025-07-03 09:00:03] == FIN de ejecución del cron para SOAT ==
+[2025-07-03 09:00:03] == FIN de ejecución del cron para MANTENIMIENTO ACEITE ==
+[2025-07-03 13:22:30] == INICIO de ejecución del cron para SOAT ==
+[2025-07-03 13:22:30] Ya se envió el recordatorio de tipo 3_dia a adriancamargo69@gmail.com
+[2025-07-03 13:22:30] == FIN de ejecución del cron para SOAT ==
+[2025-07-03 14:23:06] == INICIO de ejecución del cron para SOAT ==
+[2025-07-03 14:23:06] == FIN de ejecución del cron para SOAT ==
+[2025-07-03 14:25:47] == INICIO de ejecución del cron para SOAT ==
+[2025-07-03 14:25:47] == FIN de ejecución del cron para SOAT ==
+[2025-07-03 14:26:01] == INICIO de ejecución del cron para SOAT ==
+[2025-07-03 14:26:02] Correo enviado a adriancamargo69@gmail.com (3_dia)
+[2025-07-03 14:26:02] == FIN de ejecución del cron para SOAT ==
+[2025-07-04 09:00:01] == INICIO de ejecución del cron para MANTENIMIENTO ACEITE ==
+[2025-07-04 09:00:01] == INICIO de ejecución del cron para TECNO ==
+[2025-07-04 09:00:01] == FIN de ejecución del cron para TECNO ==
+[2025-07-04 09:00:01] == FIN de ejecución del cron para MANTENIMIENTO ACEITE ==
+[2025-07-04 09:00:01] == INICIO de ejecución del cron para LICENCIA ==
+[2025-07-04 09:00:01] == FIN de ejecución del cron para LICENCIA ==
+[2025-07-04 09:00:01] == INICIO de ejecución del cron para LLANTAS ==
+[2025-07-04 09:00:01] == INICIO de ejecución del cron para PICO Y PLACA ==
+[2025-07-04 09:00:01] Mañana no hay pico y placa.
+[2025-07-04 09:00:01] == FIN de ejecución del cron para PICO Y PLACA ==
+[2025-07-04 09:00:02] == INICIO de ejecución del cron para SOAT ==
+[2025-07-04 09:00:02] == FIN de ejecución del cron para SOAT ==
+[2025-07-04 09:00:02] Correo enviado a instructor@gmail.com (1_dia)
+[2025-07-04 09:00:02] == FIN de ejecución del cron para LLANTAS ==

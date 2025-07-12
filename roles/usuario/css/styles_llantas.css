@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form Styles */
+.container {
+    width: 100%;
+    max-width: 900px; /* Ajustado para filas de 3 */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 35px auto 20px auto; /* Adjusted for fixed header */
+}
+
+.titulo {
+    text-align: center;
+}
+
+.form-llantas {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-llantas h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-align: center;
+    color: #d32f2f;
+}
+
+.form-llantas .instructions {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #666;
+    margin-top: 20px;
+}
+
+.input-gruop {
+    margin-bottom: 20px;
+}
+
+.input-subgroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-subgroup > div {
+    flex: 1 1 30%; /* Asegura que cada campo ocupe 1/3 del ancho */
+    display: flex;
+    flex-direction: column;
+}
+
+.input_field_placa, .input_field_estado, .input_field_ultimo_cambio,
+.input_field_presion_llantas, .input_field_kilometraje_actual,
+.input_field_proximo_cambio_km, .input_field_proximo_cambio_fecha,
+.input_field_notas {
+    background-color: #c2c2c2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.input_field_placa label, .input_field_estado label, .input_field_ultimo_cambio label,
+.input_field_presion_llantas label, .input_field_kilometraje_actual label,
+.input_field_proximo_cambio_km label, .input_field_proximo_cambio_fecha label,
+.input_field_notas label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+    display: block; /* Para que ocupe todo el ancho y se coloque arriba */
+}
+
+input, select, textarea {
+    width: 90%; /* Ajustado para que ocupe casi todo el ancho, dejando espacio para el ícono */
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 10px;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+}
+
+input::placeholder, select::placeholder, textarea::placeholder {
+    color: #666;
+}
+
+.input_field_placa i, .input_field_estado i, .input_field_ultimo_cambio i,
+.input_field_presion_llantas i, .input_field_kilometraje_actual i,
+.input_field_proximo_cambio_km i, .input_field_proximo_cambio_fecha i,
+.input_field_notas i {
+    margin-left: 10px;
+    color: #fff;
+    width: 10%; /* Asegura que el ícono tenga un espacio definido */
+}
+
+.btn-field {
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-field button {
+    border: solid 3px #d32f2f;
+    padding: 10px 30px;
+    background: #d32f2f;
+    font-weight: 600;
+    color: #fff;
+    transition: 0.3s;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.btn-field button:hover {
+    border: solid 3px #d32f2f;
+    background-color: transparent;
+    color: #d32f2f;
+}
+
+.validacion_placa, .validacion_estado, .validacion_ultimo_cambio,
+.validacion_presion_llantas, .validacion_kilometraje_actual,
+.validacion_proximo_cambio_km, .validacion_proximo_cambio_fecha,
+.validacion_notas {
+    font-weight: 600;
+    font-size: 10px;
+    opacity: 0;
+    padding: 5px 0;
+    color: #c50000;
+    display: block; /* Asegura que el mensaje ocupe todo el ancho debajo del campo */
+}
+
+.formulario_error {
+    font-weight: 600;
+    font-size: 13px;
+    text-align: center;
+    color: #c50000;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.formulario_exito {
+    font-weight: 600;
+    font-size: 13px;
+    text-align: center;
+    color: #158000;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.formulario_error_placa, .formulario_error_estado, .formulario_error_ultimo_cambio,
+.formulario_error_presion_llantas, .formulario_error_kilometraje_actual,
+.formulario_error_proximo_cambio_km, .formulario_error_proximo_cambio_fecha,
+.formulario_error_notas {
+    color: #c50000;
+}
+
+.input_field_placa_correcto, .input_field_estado_correcto, .input_field_ultimo_cambio_correcto,
+.input_field_presion_llantas_correcto, .input_field_kilometraje_actual_correcto,
+.input_field_proximo_cambio_km_correcto, .input_field_proximo_cambio_fecha_correcto,
+.input_field_notas_correcto {
+    background-color: #c2c2c2;
+    border: solid 3px #158000;
+    color: #158000;
+}
+
+.input_field_placa_correcto i, .input_field_estado_correcto i, .input_field_ultimo_cambio_correcto i,
+.input_field_presion_llantas_correcto i, .input_field_kilometraje_actual_correcto i,
+.input_field_proximo_cambio_km_correcto i, .input_field_proximo_cambio_fecha_correcto i,
+.input_field_notas_correcto i {
+    color: #158000;
+}
+
+.input_field_placa_incorrecto, .input_field_estado_incorrecto, .input_field_ultimo_cambio_incorrecto,
+.input_field_presion_llantas_incorrecto, .input_field_kilometraje_actual_incorrecto,
+.input_field_proximo_cambio_km_incorrecto, .input_field_proximo_cambio_fecha_incorrecto,
+.input_field_notas_incorrecto {
+    background-color: #c2c2c2;
+    border: solid 3px #c50000;
+    color: #c50000;
+}
+
+.input_field_placa_incorrecto i, .input_field_estado_incorrecto i, .input_field_ultimo_cambio_incorrecto i,
+.input_field_presion_llantas_incorrecto i, .input_field_kilometraje_actual_incorrecto i,
+.input_field_proximo_cambio_km_incorrecto i, .input_field_proximo_cambio_fecha_incorrecto i,
+.input_field_notas_incorrecto i {
+    color: #c50000;
+}
+
+@media screen and (max-width: 768px) {
+    .input-subgroup > div {
+        flex: 1 1 100%; /* En pantallas pequeñas, los campos ocupan todo el ancho */
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .form-llantas h1 {
+        font-size: 24px;
+    }
+
+    .input_field_placa label, .input_field_estado label, .input_field_ultimo_cambio label,
+    .input_field_presion_llantas label, .input_field_kilometraje_actual label,
+    .input_field_proximo_cambio_km label, .input_field_proximo_cambio_fecha label,
+    .input_field_notas label {
+        font-size: 14px;
+    }
+
+    input, select, textarea {
+        width: 85%;
+        padding: 8px;
+    }
+
+    .btn-field button {
+        width: 100%;
+        padding: 8px 20px;
+    }
+}
