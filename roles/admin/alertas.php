@@ -37,7 +37,7 @@ function getAlertIcon($tipo)
 function categorizarNotificacion($mensaje)
 {
     $mensaje_lower = strtolower($mensaje);
-    
+
     foreach (PALABRAS_CLAVE as $tipo => $palabras) {
         foreach ($palabras as $palabra) {
             if (strpos($mensaje_lower, $palabra) !== false) {
@@ -54,7 +54,7 @@ function extraerPlaca($mensaje)
 {
     foreach (PATRONES_PLACA as $patron) {
         if (preg_match($patron, $mensaje, $matches)) {
-            return strtoupper($matches[0]);
+        return strtoupper($matches[0]);
         }
     }
     return 'N/A';
@@ -595,7 +595,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="js/alertas.js"></script>
 </body>
 

@@ -17,6 +17,22 @@ document.addEventListener('DOMContentLoaded', function () {
     return !isNaN(kilometraje) && kilometraje >= 0;
   }
 
+  function mostrarError(input, mensaje) {
+    input.classList.add('is-invalid');
+    let feedback = input.parentElement.querySelector('.invalid-feedback');
+    if (!feedback) {
+      feedback = document.createElement('div');
+      feedback.className = 'invalid-feedback';
+      input.parentElement.appendChild(feedback);
+    }
+    feedback.textContent = mensaje;
+  }
+
+  function limpiarErrores(form) {
+    form.querySelectorAll('.is-invalid').forEach(el => el.classList.remove('is-invalid'));
+    form.querySelectorAll('.invalid-feedback').forEach(el => el.remove());
+  }
+
   // Botón Agregar Mantenimiento
   document.getElementById('btnAgregarMantenimiento').addEventListener('click', function (e) {
     e.preventDefault();
@@ -65,29 +81,50 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('actualizarMantenimiento').addEventListener('click', function (e) {
     e.preventDefault();
     const form = document.getElementById('editarMantenimientoForm');
+    limpiarErrores(form);
 
-    const placa = document.getElementById('placaEditar').value;
-    const tipo = document.getElementById('tipoMantenimientoEditar').value;
-    const fechaProgramada = document.getElementById('fechaProgramadaEditar').value;
-    const kilometraje = document.getElementById('kilometrajeEditar').value;
+    const placa = document.getElementById('placaEditar');
+    const tipo = document.getElementById('tipoMantenimientoEditar');
+    const fechaProgramada = document.getElementById('fechaProgramadaEditar');
+    const fechaRealizada = document.getElementById('fechaRealizadaEditar');
+    const kilometraje = document.getElementById('kilometrajeEditar');
+    const observaciones = document.getElementById('observacionesEditar');
 
-    if (!validarPlaca(placa)) {
-      alert('Debe seleccionar un vehículo');
-      return false;
+    let valido = true;
+    const hoy = new Date();
+    hoy.setHours(0,0,0,0);
+    const fechaProg = new Date(fechaProgramada.value);
+    const fechaReal = fechaRealizada.value ? new Date(fechaRealizada.value) : null;
+
+    if (!validarPlaca(placa.value)) {
+      mostrarError(placa, 'Debe seleccionar un vehículo');
+      valido = false;
     }
-    if (!validarTipo(tipo)) {
-      alert('Debe seleccionar un tipo de mantenimiento');
-      return false;
+    if (!validarTipo(tipo.value)) {
+      mostrarError(tipo, 'Debe seleccionar un tipo de mantenimiento');
+      valido = false;
     }
-    if (!validarFecha(fechaProgramada)) {
-      alert('Debe ingresar una fecha programada');
-      return false;
+    if (!validarFecha(fechaProgramada.value)) {
+      mostrarError(fechaProgramada, 'Debe ingresar una fecha programada');
+      valido = false;
+    } else if (fechaProg < hoy) {
+      mostrarError(fechaProgramada, 'La fecha programada no puede ser anterior a hoy');
+      valido = false;
     }
-    if (!validarKilometraje(kilometraje)) {
-      alert('El kilometraje debe ser un número válido mayor o igual a 0');
-      return false;
+    if (fechaRealizada.value && fechaReal < fechaProg) {
+      mostrarError(fechaRealizada, 'La fecha realizada no puede ser anterior a la programada');
+      valido = false;
+    }
+    if (!kilometraje.value || isNaN(kilometraje.value) || Number(kilometraje.value) <= 0) {
+      mostrarError(kilometraje, 'El kilometraje debe ser un número mayor a 0');
+      valido = false;
+    }
+    if (observaciones.value.length > 500 || !observaciones.value.trim() && observaciones.value.length > 0) {
+      mostrarError(observaciones, 'Las observaciones no pueden superar 500 caracteres ni ser solo espacios');
+      valido = false;
     }
 
+    if (!valido) return;
     if (!form.checkValidity()) {
       form.reportValidity();
       return;
@@ -98,21 +135,18 @@ document.addEventListener('DOMContentLoaded', function () {
       method: 'POST',
       body: formData
     })
-      .then(response => {
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-        return response.text();
-      })
+      .then(response => response.text())
       .then(result => {
         if (result.includes('exitosamente')) {
           alert(result);
           bootstrap.Modal.getInstance(document.getElementById('editarMantenimientoModal')).hide();
           setTimeout(() => location.reload(), 1500);
-            } else {
+        } else {
           alert(result);
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
         alert('Error de conexión al actualizar el mantenimiento');
       });
   });
@@ -213,30 +247,51 @@ document.addEventListener('DOMContentLoaded', function () {
   // Botón Guardar Mantenimiento
   document.getElementById('guardarMantenimiento').addEventListener('click', function (e) {
     e.preventDefault();
-
     const form = document.getElementById('agregarMantenimientoForm');
-    const placa = document.getElementById('placaAgregar').value;
-    const tipo = document.getElementById('tipoMantenimientoAgregar').value;
-    const fechaProgramada = document.getElementById('fechaProgramadaAgregar').value;
-    const kilometraje = document.getElementById('kilometrajeAgregar').value;
+    limpiarErrores(form);
 
-    if (!validarPlaca(placa)) {
-      alert('Debe seleccionar un vehículo');
-      return;
+    const placa = document.getElementById('placaAgregar');
+    const tipo = document.getElementById('tipoMantenimientoAgregar');
+    const fechaProgramada = document.getElementById('fechaProgramadaAgregar');
+    const fechaRealizada = document.getElementById('fechaRealizadaAgregar');
+    const kilometraje = document.getElementById('kilometrajeAgregar');
+    const observaciones = document.getElementById('observacionesAgregar');
+
+    let valido = true;
+    const hoy = new Date();
+    hoy.setHours(0,0,0,0);
+    const fechaProg = new Date(fechaProgramada.value);
+    const fechaReal = fechaRealizada.value ? new Date(fechaRealizada.value) : null;
+
+    if (!validarPlaca(placa.value)) {
+      mostrarError(placa, 'Debe seleccionar un vehículo');
+      valido = false;
     }
-    if (!validarTipo(tipo)) {
-      alert('Debe seleccionar un tipo de mantenimiento');
-      return;
+    if (!validarTipo(tipo.value)) {
+      mostrarError(tipo, 'Debe seleccionar un tipo de mantenimiento');
+      valido = false;
     }
-    if (!validarFecha(fechaProgramada)) {
-      alert('Debe ingresar una fecha programada');
-      return;
+    if (!validarFecha(fechaProgramada.value)) {
+      mostrarError(fechaProgramada, 'Debe ingresar una fecha programada');
+      valido = false;
+    } else if (fechaProg < hoy) {
+      mostrarError(fechaProgramada, 'La fecha programada no puede ser anterior a hoy');
+      valido = false;
     }
-    if (!validarKilometraje(kilometraje)) {
-      alert('El kilometraje debe ser un número válido mayor o igual a 0');
-      return;
+    if (fechaRealizada.value && fechaReal < fechaProg) {
+      mostrarError(fechaRealizada, 'La fecha realizada no puede ser anterior a la programada');
+      valido = false;
+    }
+    if (!kilometraje.value || isNaN(kilometraje.value) || Number(kilometraje.value) <= 0) {
+      mostrarError(kilometraje, 'El kilometraje debe ser un número mayor a 0');
+      valido = false;
+    }
+    if (observaciones.value.length > 500 || !observaciones.value.trim() && observaciones.value.length > 0) {
+      mostrarError(observaciones, 'Las observaciones no pueden superar 500 caracteres ni ser solo espacios');
+      valido = false;
     }
 
+    if (!valido) return;
     if (!form.checkValidity()) {
       form.reportValidity();
       return;
@@ -244,25 +299,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const formData = new FormData(form);
     fetch('modals_mantenimiento/agregar_mantenimiento.php', {
-                method: 'POST',
-                body: formData
-            })
-      .then(response => {
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-        return response.text();
-      })
+      method: 'POST',
+      body: formData
+    })
+      .then(response => response.text())
       .then(result => {
         if (result.includes('exitosamente')) {
           alert(result);
           bootstrap.Modal.getInstance(document.getElementById('agregarMantenimientoModal')).hide();
-                    setTimeout(() => location.reload(), 1500);
-                } else {
+          setTimeout(() => location.reload(), 1500);
+        } else {
           alert(result);
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
         alert('Error de conexión al agregar el mantenimiento');
-            });
-    });
+      });
+  });
 });
