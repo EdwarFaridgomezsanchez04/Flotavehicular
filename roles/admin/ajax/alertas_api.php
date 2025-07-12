@@ -135,6 +135,47 @@ class AlertasAPI {
         }
     }
 
+    // Obtener detalles completos de una notificación
+    public function obtenerDetalleNotificacion($id) {
+        try {
+            $stmt = $this->con->prepare("
+                SELECT 
+                    n.id, 
+                    n.mensaje, 
+                    n.fecha, 
+                    n.leido, 
+                    u.nombre_completo,
+                    u.documento as documento_usuario
+                FROM notificaciones n
+                LEFT JOIN usuarios u ON n.documento_usuario = u.documento
+                WHERE n.id = :id AND n.documento_usuario = :documento
+            ");
+            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+            $stmt->bindParam(':documento', $this->documento);
+            $stmt->execute();
+            
+            $notificacion = $stmt->fetch(PDO::FETCH_ASSOC);
+            
+            if ($notificacion) {
+                return [
+                    'success' => true,
+                    'data' => $notificacion
+                ];
+            } else {
+                return [
+                    'success' => false,
+                    'error' => 'Notificación no encontrada'
+                ];
+            }
+            
+        } catch (PDOException $e) {
+            return [
+                'success' => false,
+                'error' => 'Error al obtener detalles de notificación: ' . $e->getMessage()
+            ];
+        }
+    }
+
     // Marcar alerta como leída
     public function marcarComoLeida($id) {
         try {
@@ -420,6 +461,34 @@ try {
                         echo json_encode(['success' => false, 'error' => 'ID requerido']);
                     }
                     break;
+                    
+                case 'detalle':
+                    $id = $_GET['id'] ?? null;
+                    if ($id) {
+                        echo json_encode($api->obtenerDetalleNotificacion($id));
+                    } else {
+                        echo json_encode(['success' => false, 'error' => 'ID requerido']);
+                    }
+                    break;
+                    
+                // Obtener detalles de una alerta por ID (compatibilidad)
+                case 'detalle_alertas':
+                    $id = intval($_GET['id']);
+                    $query = "SELECT * FROM notificaciones WHERE id = $id AND documento_usuario = '$documento'";
+                    $result = $con->query($query);
+
+                    if ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                        echo json_encode([
+                            'success' => true,
+                            'data' => $row
+                        ]);
+                    } else {
+                        echo json_encode([
+                            'success' => false,
+                            'error' => 'No se encontró la alerta.'
+                        ]);
+                    }
+                    exit;
                     
                 case 'estadisticas':
                     echo json_encode($api->obtenerEstadisticas());
